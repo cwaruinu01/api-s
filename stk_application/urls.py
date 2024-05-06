@@ -1,10 +1,9 @@
-from django.contrib import admin
 from django.urls import path
-from stk_application import views
-from rest_framework.urlpatterns import format_suffix_patterns
+from .import views
+
 
 urlpatterns = [
-
-    path('application/', views.application_list),
+    path('mpesa/', views.mpesa, name='mpesa'),
+    path('application/', views.application_list, name='application_list'),
 ]
-#urlpatterns = format_suffix_patterns(urlpatterns)
+# urlpatterns = format_suffix_patterns(urlpatterns)
